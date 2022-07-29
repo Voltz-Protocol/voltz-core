@@ -14,6 +14,7 @@ import Decimal from "decimal.js-light";
 import { TestRateOracle } from "../../../typechain";
 import { consts } from "../../helpers/constants";
 import { ConfigForGenericTests as CompoundConfig } from "./compoundConfig";
+import { ConfigForGenericTests as CompoundBorrowConfig } from "./compoundBorrowConfig";
 import { ConfigForGenericTests as AaveConfig } from "./aaveConfig";
 import { ConfigForGenericTests as LidoConfig } from "./lidoConfig";
 import { ConfigForGenericTests as RocketPoolConfig } from "./rocketPoolConfig";
@@ -32,6 +33,7 @@ let testRateOracle: TestRateOracle;
 // Modify this list to test new rate oracles
 const CONFIGURATIONS_UNDER_TEST = [
   CompoundConfig,
+  CompoundBorrowConfig,
   AaveConfig,
   LidoConfig,
   RocketPoolConfig,
